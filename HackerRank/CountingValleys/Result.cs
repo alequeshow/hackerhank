@@ -1,15 +1,24 @@
 ﻿namespace CountingValleys
 {
+    using System;
+
     public class Result
     {
         public Result(int steps, string path)
         {
-            this.Steps = steps;
+            if (steps != path.Length)
+            {
+                throw new ArgumentException($"Parameters {nameof(steps)} and {nameof(path)} must match");
+            }
+
+            if (steps < 2 || steps > 1000000)
+            {
+                throw new ArgumentException($"Parameter {nameof(steps)} must be between 2 and 1000000");
+            }
+
             this.Path = path;
             this.CurrentSeaDistance = 0;
         }
-
-        int Steps { get; set; }
 
         string Path { get; set; }
 
@@ -19,11 +28,9 @@
 
         public int GetValue()
         {
-            int result = 0;
+            var result = 0;
 
-            var array = Path.ToCharArray();
-
-            for (int i = 0; i <= array.Length; i++)
+            for (var i = 0; i <= PathArray.Length; i++)
             {
                 if (HikeChanged(i) && WasClimbing(i))
                 {
@@ -72,12 +79,7 @@
 
         bool WasClimbing(int step)
         {
-            if (step == 0)
-            {
-                return false;
-            }
-
-            return PathArray[step - 1] == 'U';
+            return (step != 0 && PathArray[step - 1] == 'U');
         }
 
         bool LastStep(int step)
