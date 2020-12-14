@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingValleys", "CountingValleys\CountingValleys.csproj", "{51B44760-DDE4-4F74-B4F3-B1F0710A15A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingValleys", "CountingValleys\CountingValleys.csproj", "{51B44760-DDE4-4F74-B4F3-B1F0710A15A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DArrayDS", "2DArrayDS\2DArrayDS.csproj", "{29879BDF-2405-4657-B261-CE3A9BF5C473}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{51B44760-DDE4-4F74-B4F3-B1F0710A15A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51B44760-DDE4-4F74-B4F3-B1F0710A15A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51B44760-DDE4-4F74-B4F3-B1F0710A15A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29879BDF-2405-4657-B261-CE3A9BF5C473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29879BDF-2405-4657-B261-CE3A9BF5C473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29879BDF-2405-4657-B261-CE3A9BF5C473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29879BDF-2405-4657-B261-CE3A9BF5C473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
