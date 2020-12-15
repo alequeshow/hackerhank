@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingValleys", "CountingValleys\CountingValleys.csproj", "{51B44760-DDE4-4F74-B4F3-B1F0710A15A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DArrayDS", "2DArrayDS\2DArrayDS.csproj", "{29879BDF-2405-4657-B261-CE3A9BF5C473}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2DArrayDS", "2DArrayDS\2DArrayDS.csproj", "{29879BDF-2405-4657-B261-CE3A9BF5C473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewYearChaos", "NewYearChaos\NewYearChaos.csproj", "{158DB8DB-5A87-48D9-87CA-0643B6DE529E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewYearChaos", "NewYearChaos\NewYearChaos.csproj", "{158DB8DB-5A87-48D9-87CA-0643B6DE529E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoStrings", "TwoStrings\TwoStrings.csproj", "{169EFE6D-689B-4611-A644-315B63DBBA4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{158DB8DB-5A87-48D9-87CA-0643B6DE529E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{158DB8DB-5A87-48D9-87CA-0643B6DE529E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{158DB8DB-5A87-48D9-87CA-0643B6DE529E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169EFE6D-689B-4611-A644-315B63DBBA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169EFE6D-689B-4611-A644-315B63DBBA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169EFE6D-689B-4611-A644-315B63DBBA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169EFE6D-689B-4611-A644-315B63DBBA4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
