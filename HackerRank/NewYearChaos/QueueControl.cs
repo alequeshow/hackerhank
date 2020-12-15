@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
     public class QueueControl
     {
@@ -22,12 +21,12 @@
         {
             while (!AssertQueues())
             {
-                for (var i = 0; i < this.OrderedQueue.Length; i++)
+                for (var i = this.OrderedQueue.Length - 1; i >= 0; i--)
                 {
                     var orderedValue = this.OrderedQueue[i];
                     var currentValue = this.Queue[i];
 
-                    if (orderedValue - currentValue < 0)
+                    if (orderedValue - currentValue > 0)
                     {
                         SwapNext(i);
                     }
@@ -38,31 +37,13 @@
                         return;
                     }
 
-                    Console.WriteLine(string.Join(' ', this.Queue));
+                    // Debug console
+                    // Console.WriteLine(string.Join(' ', this.Queue));
                 }
             }
 
             Console.WriteLine(this.Bribes.Count());
             return;
-
-            //for (var i = this.Queue.Length - 1; i >= 0; i--)
-            //{
-            //    var originalValue = this.OrderedQueue[i];
-            //    var currentValuePlace = this.Queue.ToList().IndexOf(originalValue);
-            //    var diff = currentValuePlace - i;
-
-            //    if (diff < -2)
-            //    {
-            //        Console.WriteLine("Too chaotic");
-            //        return;
-            //    }
-            //    else if (diff < 0)
-            //    {
-            //        bribes += (diff * -1);
-            //    }
-            //}
-
-            //Console.WriteLine(bribes);
         }
 
         private bool AssertQueues()
@@ -70,20 +51,26 @@
             return Enumerable.SequenceEqual(OrderedQueue, Queue);
         }
 
-        private bool isLast(int i)
+        private bool isFirst(int i)
         {
-            return i == this.Queue.Length - 1;
+            return i == 0;
         }
 
         private void SwapNext(int i)
         {
-            if (isLast(i))
+            if (isFirst(i))
             {
                 return;
             }
-            var aux = this.Queue[i];
-            this.Queue[i] = this.Queue[i + i];
-            this.Queue[i + i] = aux;
+
+            if (IsOrdered(i))
+            {
+                return;
+            }
+
+            var aux = this.Queue[i - 1];
+            this.Queue[i - 1] = this.Queue[i];
+            this.Queue[i] = aux;
 
             // Store the one who bribed
             this.Bribes.Add(aux);
@@ -94,9 +81,14 @@
             var mostBriber = this.Bribes.GroupBy(i => i)
                 .OrderByDescending(g => g.Count())
                 .Take(1)
-                .Select(g => g.Key).FirstOrDefault();
+                .Select(g => g.Count()).FirstOrDefault();
 
             return mostBriber >= 3;
+        }
+
+        private bool IsOrdered(int i)
+        {
+            return this.Queue[i] > this.Queue[i - 1];
         }
     }
 }
