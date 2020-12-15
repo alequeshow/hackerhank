@@ -19,9 +19,11 @@
             var orderedQueue = this.Queue.OrderBy(q => q).ToArray();
             var bribes = 0;
 
-            for (var i = 0; i < this.Queue.Length; i++)
+            for (var i = this.Queue.Length - 1; i >= 0; i--)
             {
-                var diff = orderedQueue[i] - this.Queue[i];
+                var originalValue = orderedQueue[i];
+                var currentValuePlace = this.Queue.ToList().IndexOf(originalValue);
+                var diff = currentValuePlace - i;
 
                 if (diff < -2)
                 {
@@ -31,10 +33,6 @@
                 else if (diff < 0)
                 {
                     bribes += (diff * -1);
-                }
-                else if (i < this.Queue.Length - 1 && this.Queue[i] > this.Queue[i + 1])
-                {
-                    bribes++;
                 }
             }
 
