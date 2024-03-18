@@ -1,8 +1,8 @@
-namespace FinancialPortifolio.Services;
+namespace FinancialPortfolio.Services;
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FinancialPortifolio.Domain;
+using FinancialPortfolio.Domain;
 
 public interface IPortfolioService
 {

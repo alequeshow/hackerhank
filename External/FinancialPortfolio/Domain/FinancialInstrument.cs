@@ -1,4 +1,4 @@
-namespace FinancialPortifolio.Domain;
+namespace FinancialPortfolio.Domain;
 
 public class FinancialInstrument : IFinancialInstrument 
 {

@@ -1,6 +1,6 @@
-namespace FinancialPortifolio.Services;
+namespace FinancialPortfolio.Services;
 
-using FinancialPortifolio.Repository;
+using FinancialPortfolio.Repository;
 
 public static class ServiceConfiguration
 {

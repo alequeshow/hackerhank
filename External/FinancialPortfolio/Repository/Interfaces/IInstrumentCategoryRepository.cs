@@ -1,8 +1,8 @@
-namespace FinancialPortifolio.Repository.Interfaces;
+namespace FinancialPortfolio.Repository.Interfaces;
 
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FinancialPortifolio.Domain;
+using FinancialPortfolio.Domain;
 
 public interface IInstrumentCategoryRepository
 {

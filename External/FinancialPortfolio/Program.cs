@@ -1,7 +1,7 @@
-﻿namespace FinancialPortifolio;
+﻿namespace FinancialPortfolio;
 
-using FinancialPortifolio.Domain;
-using FinancialPortifolio.Services;
+using FinancialPortfolio.Domain;
+using FinancialPortfolio.Services;
 
 public class Program
 {    

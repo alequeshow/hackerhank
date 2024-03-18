@@ -1,7 +1,7 @@
-namespace FinancialPortifolio.Repository;
+namespace FinancialPortfolio.Repository;
 
-using FinancialPortifolio.Domain;
-using FinancialPortifolio.Repository.Interfaces;
+using FinancialPortfolio.Domain;
+using FinancialPortfolio.Repository.Interfaces;
 
 public class InstrumentCategoryRepository : IInstrumentCategoryRepository
 {

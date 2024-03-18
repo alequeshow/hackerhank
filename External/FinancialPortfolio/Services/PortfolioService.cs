@@ -1,7 +1,7 @@
-namespace FinancialPortifolio.Services;
+namespace FinancialPortfolio.Services;
 
 using System.Threading.Tasks;
-using FinancialPortifolio.Repository.Interfaces;
+using FinancialPortfolio.Repository.Interfaces;
 
 public class PortfolioService : IPortfolioService
 {
