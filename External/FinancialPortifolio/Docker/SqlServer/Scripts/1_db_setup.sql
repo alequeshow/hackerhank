@@ -1,0 +1,39 @@
+CREATE DATABASE FinancialPortfolio;
+GO
+
+USE FinancialPortfolio;
+GO
+
+CREATE TABLE InstrumentCategories
+(
+    Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL UNIQUE,
+    MinValue DECIMAL,
+    MaxValue DECIMAL
+);
+GO
+
+CREATE TABLE IntrumentTypes
+(
+    Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL UNIQUE
+);
+GO
+
+CREATE TABLE FinancialInstruments
+(
+    Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    TypeId UNIQUEIDENTIFIER NOT NULL FOREIGN KEY REFERENCES IntrumentTypes(Id),
+    CategoryId UNIQUEIDENTIFIER NOT NULL FOREIGN KEY REFERENCES InstrumentCategories(Id),
+    MarketValue DECIMAL NOT NULL
+);
+
+CREATE TABLE FinancialInstrumentsHistory
+(
+    Id UNIQUEIDENTIFIER NOT NULL,
+    Type VARCHAR(50) NOT NULL,
+    Category VARCHAR(50) NOT NULL,
+    MarketValue DECIMAL,
+    EvaluationDate DATETIME
+);
+GO
