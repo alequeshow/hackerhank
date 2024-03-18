@@ -8,12 +8,9 @@ public class Program
     public static async Task Main(string[] args)
     {
         Console.WriteLine("Categorizing Financial Instruments in a Portfolio");
-
-        Console.WriteLine("Initialyzing service");
+        Console.WriteLine();
 
         var portfolioService = ServiceConfiguration.GetService();
-
-        Console.WriteLine("Getting instrument samples");
 
         var instruments = new List<FinancialInstrument>()
         {
@@ -23,12 +20,14 @@ public class Program
             new() { MarketValue = 300000, Type = "Stock" }
         };
 
-        Console.WriteLine(string.Join("/n",instruments.Select(x=> string.Join(",", x.MarketValue, x.Type))));
+        instruments.ForEach(x => 
+            Console.WriteLine($"{nameof(x.MarketValue)}: {x.MarketValue}, {nameof(x.Type)}: {x.Type}"));
 
-        Console.WriteLine("Evaluating instrument samples");
+        Console.WriteLine();
+        Console.WriteLine("Evaluating instrument samples:");
 
         var result = await portfolioService.EvaluateInstrumentsAsync(instruments);
 
-        Console.WriteLine(string.Join(",", result));
+        Console.WriteLine(string.Join(", ", result));
     }
 }
