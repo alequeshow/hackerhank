@@ -52,3 +52,10 @@ Write a procedural version of your solution for Question 1 using T-SQL (SQL Serv
 Your procedure must write the inputs and outputs in one or more tables, following best practices for table modeling.
 
 Include the script to create the table(s) in your answer
+
+## Resolution
+To setup and test the SQL Server approach, simply run the following command:
+
+```
+docker-compose up -d --build
+```
