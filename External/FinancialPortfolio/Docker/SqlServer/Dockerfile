@@ -1,4 +1,4 @@
-# Choose ubuntu version
+# Choose 2022 version
 FROM mcr.microsoft.com/mssql/server:2022-latest
 
 # Create app directory
