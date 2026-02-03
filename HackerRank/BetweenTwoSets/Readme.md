@@ -25,9 +25,9 @@ There are two numbers between the arrays: *6* and *12*.
 
 ## Function description
 
-Complete the getTotalX function in the editor below. It should return the number of integers that are betwen the sets.
+Complete the GetTotal function in the editor below. It should return the number of integers that are between the sets.
 
-getTotalX has the following parameter(s):2
+GetTotal has the following parameter(s):
 
 - int a[n]: an array of integers
 - int b[m]: an array of integers
@@ -46,7 +46,7 @@ The third line contains *m* distinct space-separated integers *b[j]* where *0 <=
 
 - 1 <= n,m <= 10
 - 1 <= a[i] <= 100
-- 1 <= n[j] <= 100
+- 1 <= b[j] <= 100
 
 ## Sample Input
 
@@ -68,3 +68,34 @@ The third line contains *m* distinct space-separated integers *b[j]* where *0 <=
 - 4, 8 and 16 divide evenly into 16, 32, 96.
 
 4, 8 and 16 are the only three numbers for which each element of a is a factor and each is a factor of all elements of b.
+
+
+## Other Samples
+
+### Sample 1
+
+Input
+
+```
+10 10
+100 99 98 97 96 95 94 93 92 91
+1 2 3 4 5 6 7 8 9 10
+```
+
+Output
+```
+0
+```
+
+### Sample 2
+
+```
+1 1
+1
+100
+```
+
+Output
+```
+9
+```
